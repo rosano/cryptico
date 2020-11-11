@@ -3301,6 +3301,7 @@ var cryptico = (function() {
         var ret = "";
         var i;
         var k = 0;
+        var v = 0;
         var slop;
         for (i = 0; i < s.length; ++i)
         {
