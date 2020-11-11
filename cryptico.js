@@ -3475,8 +3475,7 @@ var cryptico = (function() {
     // Returns the ascii-armored version of the public key.
     my.publicKeyString = function(rsakey) 
     {
-        pubkey = my.b16to64(rsakey.n.toString(16));
-        return pubkey; 
+        return my.b16to64(rsakey.n.toString(16));
     }
     
     // Returns an MD5 sum of a publicKeyString for easier identification.
