@@ -1,4 +1,4 @@
 {
   "name": "cryptico",
-  "main": "cryptico.js"
+  "main": "cryptico-node.js"
 }
