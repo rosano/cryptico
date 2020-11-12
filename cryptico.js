@@ -2660,7 +2660,7 @@ function RSASetPublic(N, E)
         this.n = parseBigInt(N, 16);
         this.e = parseInt(E, 16);
     }
-    else alert("Invalid RSA public key");
+    else throw new Error("Invalid RSA public key");
 }
 
 // Perform raw public operation on "x": return x^e (mod n)
@@ -2764,7 +2764,7 @@ function RSASetPrivate(N, E, D)
         this.e = parseInt(E, 16);
         this.d = parseBigInt(D, 16);
     }
-    else alert("Invalid RSA private key");
+    else throw new Error("Invalid RSA private key");
 }
 
 // Set the private key fields N, e, d and CRT params from hex strings
@@ -2781,7 +2781,7 @@ function RSASetPrivateEx(N, E, D, P, Q, DP, DQ, C)
         this.dmq1 = parseBigInt(DQ, 16);
         this.coeff = parseBigInt(C, 16);
     }
-    else alert("Invalid RSA private key");
+    else throw new Error("Invalid RSA private key");
 }
 
 // Generate a new random private key B bits long, using public expt E
@@ -3110,7 +3110,7 @@ var aes = (function () {
             ks = 16 * (14 + 1);
             break;
         default:
-            alert("my.ExpandKey: Only key lengths of 16, 24 or 32 bytes allowed!");
+            throw new Error("my.ExpandKey: Only key lengths of 16, 24 or 32 bytes allowed!");
         }
         for (var i = kl; i < ks; i += 4) {
             var temp = key.slice(i - 4, i);
