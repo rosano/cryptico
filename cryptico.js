@@ -3556,3 +3556,8 @@ var cryptico = (function() {
     return my;
 
 }());
+
+if (typeof module !== 'undefined') {
+    module.exports = cryptico;
+    module.exports.RSAKey = RSAKey;
+}
