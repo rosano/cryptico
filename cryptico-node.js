@@ -3011,8 +3011,6 @@ var cryptico = module.exports = (function() {
 
 }());
 
-module.exports.RSAKey = RSAKey;
-
 module.exports = cryptico;
 module.exports.RSAKey = RSAKey;
 
